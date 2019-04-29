@@ -12,7 +12,7 @@
 #include <Fcntl.h>
 #endif
 
-// <ウィンドウハンドル>
+ // <ウィンドウハンドル>
 static HWND hWnd;
 
 // <カレントディレクトリの修正>
@@ -134,6 +134,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	while (!ProcessMessage() && !CheckHitKey(EXIT_KEY))
 	{
+		// 入力更新
+		InputManager::GetInstance().Update();
 		// ゲームの更新処理
 		game->Update();
 		// ゲームの描画処理
