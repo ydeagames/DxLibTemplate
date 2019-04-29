@@ -1,0 +1,55 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>DXライブラリゲームアプリケーション</Name>
+    <Description>DXライブラリを使用したゲームアプリケーションを作成するためのプロジェクトです。</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Game</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>MyTemplate.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="DxLibTemplate.vcxproj" File="DxLibTemplate.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">DxLibTemplate.vcxproj.filters</ProjectItem>
+      
+      <!-- WinMain -->
+      <ProjectItem ReplaceParameters="false" TargetFileName="WinMain.cpp">          WinMain.cpp                               </ProjectItem>
+
+      <!-- ライブラリ -->
+      <ProjectItem ReplaceParameters="false" TargetFileName="GameLib.h">            Libraries\GameLibrary\GameLib.h           </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Color.cpp">            Libraries\GameLibrary\Color.cpp           </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Color.h">              Libraries\GameLibrary\Color.h             </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Singleton.h">          Libraries\GameLibrary\Singleton.h         </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Input.cpp">            Libraries\GameLibrary\Input.cpp           </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Input.h">              Libraries\GameLibrary\Input.h             </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MathUtils.cpp">        Libraries\GameLibrary\MathUtils.cpp       </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MathUtils.h">          Libraries\GameLibrary\MathUtils.h         </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Screen.cpp">           Libraries\GameLibrary\Screen.cpp          </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Screen.h">             Libraries\GameLibrary\Screen.h            </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SystemUtils.cpp">      Libraries\GameLibrary\SystemUtils.cpp     </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SystemUtils.h">        Libraries\GameLibrary\SystemUtils.h       </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Vector2.cpp">          Libraries\GameLibrary\Vector2.cpp         </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Vector2.h">            Libraries\GameLibrary\Vector2.h           </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.cpp">              Libraries\Dependencies\pch.cpp            </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="pch.h">                Libraries\Dependencies\pch.h              </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MemoryLeakDetector.h"> Libraries\Utilities\MemoryLeakDetector.h  </ProjectItem>
+
+      <!-- ゲーム -->
+      <ProjectItem ReplaceParameters="false" TargetFileName="GameMain.cpp">         Game\GameMain.cpp                         </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="GameMain.h">           Game\GameMain.h                           </ProjectItem>
+
+      <!-- リソース -->
+      <ProjectItem ReplaceParameters="false" TargetFileName="SE00.ogg">             Resources\Audio\SE00.ogg                  </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="PongScore.dft">        Resources\Fonts\PongScore.dft             </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Icon.h">               Resources\Icon\Icon.h                     </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Icon.rc">              Resources\Icon\Icon.rc                    </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Icon.ico">             Resources\Icon\Icon.ico                   </ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Logo.png">             Resources\Textures\Logo.png               </ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
